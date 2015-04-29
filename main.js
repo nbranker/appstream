@@ -139,6 +139,8 @@ Zepto(function($) {
     function onConnected() {
         connectingContainer.hide();
         logger.info("Main.js received onConnected");
+        //This will close the window after 1 minute
+        setTimeout(function(){alert("Session Ending! Thank You!"); disconnect()},60000);
     }
 
     stxRtc.onDisconnect = onDisconnect;
